@@ -1,0 +1,27 @@
+Session 5 - Assignment 2
+
+1. Explain the importance of below 4 daemons in job execution with minimum of 5 points.
+	* NameNode
+		1. Master node
+		2. Manages the filesystem namespace
+		3. Maintains the filesystem tree and metadata for all files and directories in the tree
+		4. The namespace image and the edit log store the metadata
+		5. Knows the datanodes on which all the blocks of a file are located
+	* DataNode
+		1. Slave node
+		2. Store and retrieve data blocks whenever necessary
+		3. Report status of the node (dead or alive) and the block report to the namenode via a heartbeat
+		4. Sends acknowledgements back to the client when writing packets of a file for storage
+		5. Responsible for replicating the packets received according to the replication factor
+	* ResourceManager
+		1. Coordinates the allocation of compute resources on the cluster
+		2. Creates a job ID (application ID) for the job to be executed
+		3. Hands off the job ID to the scheduler when it receives a submitApplication() call
+		4.
+		5.
+	* NodeManager
+		1. Responsible for overseeing containers to make sure application does not use more resources than allocated
+		2. 
+		3.
+		4.
+		5.
